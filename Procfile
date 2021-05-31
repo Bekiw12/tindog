@@ -1,0 +1,1 @@
+web: gunicorn tindog_project.wsgi --log-file -
