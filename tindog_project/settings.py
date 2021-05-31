@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-u1q88o$57!6l%+@o$)vf79avzf76u5ojdx@fs&*l69-a0rd3o3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [git.heroku.com/tindoguzb.git]
 
 
 # Application definition
