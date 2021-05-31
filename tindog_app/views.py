@@ -1,13 +1,16 @@
 from django.shortcuts import render
-from .models import Title,Features,ContentForKar1,ContentForKar2
+from .models import Title,Features,Kar,ContentsForKar,CTA
 
 def index(request):
     title = Title.objects.get(id=1)
-    features = Features.objects.get(id=1)
-    contentforkar1 = ContentForKar1.objects.get(id=1)
-    contentforkar2 = ContentForKar2.objects.get(id=1)
+    features = title.features.all()
+    kar = Kar.objects.all()
+    cta = CTA.objects.get(id=1)
     context = {
-
+        'title': title,
+        'features': features,
+        'cta': cta,
+        'con': kar,
     }
-    return render(request, 'blog/index.html')
+    return render(request, 'blog/index.html', context)
 
